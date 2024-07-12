@@ -5,5 +5,5 @@ import { routes } from './app.routes';
 import { provideProtractorTestingSupport } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideProtractorTestingSupport(), provideRouter(routes)]
+  providers: [provideProtractorTestingSupport(), provideRouter(routes)],
 };
