@@ -12,5 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - run: npm ci
+      - run: npm run build
       - run: npm install -g surge
       - run: surge ./dist/my-angular-app/browser/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
