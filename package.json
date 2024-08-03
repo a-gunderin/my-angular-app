@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint --fix",
     "prettier": "npx prettier --write .",
-    "format": "npm run lint && npm run prettier"
+    "format": "npm run lint && npm run prettier",
+    "deploy": "npm run build && npx surge ./dist/my-angular-app/browser/ expensive-rake.surge.sh"
   },
   "private": true,
   "dependencies": {
