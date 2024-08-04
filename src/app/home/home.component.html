@@ -4,11 +4,11 @@
       type="text"
       placeholder="Filter by city"
       formControlName="inputValue" />
-    <button class="primary" type="submit">Search</button>
+    <button type="submit">Search</button>
   </form>
 </section>
 
-<section class="results">
+<section>
   @for (
     housingLocationItem of filteredLocationList;
     track housingLocationItem.id

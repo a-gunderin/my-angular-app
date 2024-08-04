@@ -8,7 +8,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
   templateUrl: './housing-location.component.html',
-  styleUrl: './housing-location.component.scss',
 })
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;

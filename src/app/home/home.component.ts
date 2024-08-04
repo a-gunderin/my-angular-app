@@ -10,7 +10,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, HousingLocationComponent, ReactiveFormsModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   housingService: HousingService = inject(HousingService);

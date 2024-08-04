@@ -10,7 +10,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './details.component.html',
-  styleUrl: './details.component.scss',
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
