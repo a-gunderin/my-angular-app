@@ -13,4 +13,9 @@ export const routes: Routes = [
     component: DetailsComponent,
     title: 'Home details',
   },
+  {
+    path: 'test-1',
+    loadChildren: () =>
+      import('./modules/test1/test1.module').then(m => m.Test1Module),
+  },
 ];
