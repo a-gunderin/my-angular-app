@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
+import { Test2Module } from './modules/test2/test2.module';
 
 export const routes: Routes = [
   {
@@ -17,5 +18,9 @@ export const routes: Routes = [
     path: 'test-1',
     loadChildren: () =>
       import('./modules/test1/test1.module').then(m => m.Test1Module),
+  },
+  {
+    path: 'test-2',
+    loadChildren: () => Test2Module,
   },
 ];
