@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit, OnChanges, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../../interfaces/housingLocation';
@@ -11,7 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   imports: [CommonModule, HousingLocationComponent, ReactiveFormsModule],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnChanges, OnDestroy {
   housingService: HousingService = inject(HousingService);
   housingLocationList!: HousingLocation[];
   filteredLocationList: HousingLocation[] = [];
@@ -26,6 +26,20 @@ export class HomeComponent {
         this.housingLocationList = housingLocationList;
         this.filteredLocationList = housingLocationList;
       });
+
+    console.log('Constructor goes here!!!');
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit goes here!!!');
+  }
+
+  ngOnChanges() {
+    console.log('ngOnChanges goes here!!!');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy goes here!!!');
   }
 
   filterResults() {
