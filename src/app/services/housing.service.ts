@@ -5,7 +5,16 @@ import { HousingLocation } from '../interfaces/housingLocation';
   providedIn: 'root',
 })
 export class HousingService {
-  constructor() {}
+  instanceId: string;
+
+  constructor() {
+    this.instanceId = Math.random().toString().substring(2, 9);
+    console.log(`HousingService instance created with ID: ${this.instanceId}`);
+  }
+
+  getInstanceId(): string {
+    return this.instanceId;
+  }
 
   url = '/assets/db.json';
 
