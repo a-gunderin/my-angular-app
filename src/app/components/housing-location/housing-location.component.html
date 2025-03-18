@@ -1,4 +1,6 @@
-<section class="rounded-2xl overflow-hidden bg-violet-50">
+<a
+  class="block rounded-2xl overflow-hidden bg-violet-50 opacity-80 hover:opacity-100 transition-opacity"
+  [routerLink]="['/details', housingLocation.id]">
   <img
     class="h-64 w-full object-cover"
     [src]="housingLocation.photo"
@@ -12,10 +14,8 @@
       {{ housingLocation.city }}, {{ housingLocation.state }}
     </p>
 
-    <a
-      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-      [routerLink]="['/details', housingLocation.id]">
-      Learn More >
-    </a>
+    <span class="font-medium text-blue-600 dark:text-blue-500">
+      Learn More
+    </span>
   </div>
-</section>
+</a>
